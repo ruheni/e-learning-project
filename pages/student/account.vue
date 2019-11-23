@@ -4,12 +4,14 @@
       <navbar />
     </div>
    <div class="wrapper">
+     <!-- profile  -->
         <div class="container">
                 <img id="image" src="blank-profile-picture-973460_1280.png" alt="image">
                 <h1 id="header"> Student Details </h1>
         </div>
-       
+       <!-- Data Section  -->
         <div class="info">
+          <!-- Personal data  -->
             <div class="personal_info">
                 <h3>Personal Details</h3>
                 <table>
@@ -42,6 +44,7 @@
                 
             </div>
 
+            <!-- Course Data  -->
             <div class="course_info">
                 <h3>Course Details</h3>
                 <h4>Course</h4>
@@ -91,8 +94,6 @@ body{
 }
 .container{
     background-color: #9eb2de;
-    /* background: linear-gradient(to right , #6a89cc ,#668cce); */
-    /* background: linear-gradient(to right , #9eb2de,#6a89cc ); */
     height: 16rem;
     padding: 2.5rem;
     border-top-left-radius: 5px;
@@ -123,10 +124,7 @@ body{
     font-size: 1.3rem;
 
 }
-/* .info,h4{
-    margin: 0.25rem;
 
-} */
 p{
     padding: 0.25rem;
 
