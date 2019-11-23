@@ -116,7 +116,6 @@ body{
 .info{
     display: flex; 
     padding: 1rem;
-    padding: 0.5rem;
 
 }
 .info,h3{
