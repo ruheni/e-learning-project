@@ -6,7 +6,7 @@
    <div class="wrapper">
      <!-- profile  -->
         <div class="container">
-                <img id="image" src="blank-profile-picture-973460_1280.png" alt="image">
+                <img id="image" src="assets/images/blank-profile-picture-973460_1280.png " alt="image">
                 <h1 id="header"> Student Details </h1>
         </div>
        <!-- Data Section  -->
