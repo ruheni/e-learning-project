@@ -68,5 +68,94 @@ export default {
 }
 </script>
 <style scoped>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+body{
+    background-color: #ecf0f1;
+    display: flex;
+}
+.wrapper{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%); 
+    width: 60%;
+    box-shadow: 0 1px 20px rgba(69,90,100, 0.08);
+    background-color: #ffffff;
+    border-radius: 5px;
+   
+}
+.container{
+    background-color: #9eb2de;
+    /* background: linear-gradient(to right , #6a89cc ,#668cce); */
+    /* background: linear-gradient(to right , #9eb2de,#6a89cc ); */
+    height: 16rem;
+    padding: 2.5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#image{
+    position: relative;
+    width: 10rem;
+    height: 10rem; 
+    border-radius: 50%;
 
+}
+#header{
+    float:right;
+    position: relative;
+    top: 80%;
+    font-size: 1.8rem; 
+    
+}
+.info{
+    display: flex; 
+    padding: 1rem;
+    padding: 0.5rem;
+
+}
+.info,h3{
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+
+}
+/* .info,h4{
+    margin: 0.25rem;
+
+} */
+p{
+    padding: 0.25rem;
+
+}
+.personal_info{
+    flex: 1;
+
+}
+.course_info{
+    flex: 1;
+
+}
+.personal_info>table{
+    text-align: left;
+
+}
+td,th{
+    padding: 0.25rem 0.25rem 0.25rem 0 ;
+}
+.units{
+    margin-top: 0.5rem;
+}
+@media only screen and (max-width: 768px) {
+    #header{
+        top: 0;
+        float: none;
+    }
+    .info{
+        display: block;
+    }
+}
 </style>
