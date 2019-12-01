@@ -10,10 +10,62 @@
                 <h1 id="header"> Student Details </h1>
         </div>
        <!-- Data Section  -->
+       <h3>Personal Details</h3>
         <div class="info">
+          <table class="personal_info">
+             <tr>
+                      <th>Name:</th>
+                      <td >Jane{{name}}</td>
+                    </tr>
+        
+                    <tr>    
+                      <th>Registration No:</th>
+                      <td >Hdb212-0040/1027 {{regNo}}</td>
+                    </tr>
+        
+                    <tr>    
+                        <th>Email:</th>
+                        <td >emailaddress@gmail.com {{email}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Year of Study:</th>
+                        <td >2 {{year}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Semester:</th>
+                        <td>2{{semester}}</td>
+                      </tr>
+          </table>
+          <table class="personal_info">
+             <tr>
+                      <th>Gender:</th>
+                      <td >Gender {{Gender}}</td>
+                    </tr>
+        
+                    <tr>    
+                      <th>Telephone no:</th>
+                      <td >Telephone no {{telNo}}</td>
+                    </tr>
+        
+                    <tr>    
+                        <th>Nationality:</th>
+                        <td > Nationality {{nationality}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>ID No</th>
+                        <td >id {{ID}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Sponsor</th>
+                        <td>sponsor {{sponsor}}</td>
+                      </tr>
+          </table>
           <!-- Personal data  -->
-            <div class="personal_info">
-                <h3>Personal Details</h3>
+            <!-- <div class="personal_info">  
                 <table>
                     <tr>
                       <th>Name:</th>
@@ -44,19 +96,38 @@
                 
             </div>
 
-            <!-- Course Data  -->
-            <div class="course_info">
-                <h3>Course Details</h3>
-                <h4>Course</h4>
-                <p id="course_code">course Name</p>
-                <h4 class="units">Units</h4>
-                <p id="unit1">Unit Name</p>
-                <p id="unit2">Unit Name</p>
-                <p id="unit3">Unit Name</p>
-                <p id="unit4">Unit Name</p>
-                <p id="unit5">Unit Name</p>
-                <p id="unit6">Unit Name</p>
-            </div>
+            <div class="personal_info">
+                <table>
+                    <tr>
+                      <th>Name:</th>
+                      <td >Jane{{name}}</td>
+                    </tr>
+        
+                    <tr>    
+                      <th>Registration No:</th>
+                      <td >Hdb212-0040/1027 {{regNo}}</td>
+                    </tr>
+        
+                    <tr>    
+                        <th>Email:</th>
+                        <td >emailaddress@gmail.com {{email}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Year of Study:</th>
+                        <td >2 {{year}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Semester:</th>
+                        <td>2{{semester}}</td>
+                      </tr>
+                    
+                  </table>
+                
+            
+            </div> -->
+
         </div>
     </div>
   </div>
@@ -132,16 +203,13 @@ p{
     flex: 1;
 
 }
-.course_info{
-    flex: 1;
 
-}
 .personal_info>table{
     text-align: left;
 
 }
 td,th{
-    padding: 0.25rem 0.25rem 0.25rem 0 ;
+    padding: 0.25rem 0.25rem 1.5rem 0 ;
 }
 .units{
     margin-top: 0.5rem;
