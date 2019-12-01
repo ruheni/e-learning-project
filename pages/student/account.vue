@@ -13,53 +13,57 @@
         <table class="personal_info">
           <tr>
             <th>Name:</th>
-            <td>Jane{{name}}</td>
+            <td>{{ first_name}} {{ last_name }}</td>
           </tr>
 
           <tr>
             <th>Registration No:</th>
-            <td>Hdb212-0040/1027 {{regNo}}</td>
+            <td>{{ registration_number }}</td>
           </tr>
 
           <tr>
             <th>Email:</th>
-            <td>emailaddress@gmail.com {{email}}</td>
+            <td>{{ school_email }}</td>
+          </tr>
+          <tr>
+            <th>Course</th>
+            <td>{{ course }}</td>
           </tr>
 
           <tr>
             <th>Year of Study:</th>
-            <td>2 {{year}}</td>
+            <td>2 </td>
           </tr>
 
           <tr>
             <th>Semester:</th>
-            <td>2{{semester}}</td>
+            <td>2</td>
           </tr>
         </table>
         <table class="personal_info">
           <tr>
             <th>Gender:</th>
-            <td>Gender {{Gender}}</td>
+            <td>Male</td>
           </tr>
 
           <tr>
             <th>Telephone no:</th>
-            <td>Telephone no {{telNo}}</td>
+            <td>0{{phone_number}}</td>
           </tr>
 
           <tr>
             <th>Nationality:</th>
-            <td>Nationality {{nationality}}</td>
+            <td>Kenyan</td>
           </tr>
 
           <tr>
             <th>ID No</th>
-            <td>id {{ID}}</td>
+            <td>{{ national_IDno}}</td>
           </tr>
 
           <tr>
             <th>Sponsor</th>
-            <td>sponsor {{sponsor}}</td>
+            <td>Parent</td>
           </tr>
         </table>
       </div>
@@ -72,7 +76,38 @@ export default {
   components: { navbar },
   middleware: 'auth',
   data() {
-    return {}
+    return {
+      first_name: '',
+      last_name: '',
+      registration_number: '',
+      school_email: '',
+      course: '',
+      phone_number: '',
+      national_IDno: ''
+    }
+  },
+  async created() {
+    const res = this.$axios
+      .$get('https://damp-tundra-97364.herokuapp.com/students/1')
+      .then(res => {
+        let {
+          first_name,
+          last_name,
+          registration_number,
+          school_email,
+          course,
+          phone_number,
+          national_IDno
+        } = res
+        this.first_name = first_name
+        this.last_name = last_name
+        this.registration_number = registration_number
+        this.school_email = school_email
+        this.course = course.course_name
+        this.phone_number = phone_number
+        this.national_IDno = national_IDno
+        console.log(first_name)
+      })
   }
 }
 </script>

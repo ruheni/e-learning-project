@@ -1,6 +1,7 @@
 <template>
   <div class="form">
-    <b-container>
+    <b-container class="form">
+      <h3>Login</h3>
       <b-form @submit.stop.prevent="login" v-if="!$store.state.authUser">
         <p v-if="formError">{{ formError }}</p>
         <p>
@@ -60,6 +61,7 @@ export default {
 }
 .form {
   max-width: 700px;
-  margin: 20px auto;
+  margin: auto;
+  margin-top: 50px;
 }
 </style>
