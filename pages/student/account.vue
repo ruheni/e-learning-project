@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+<<<<<<< HEAD
     <navbar />
 
     <div class="wrapper">
@@ -53,6 +54,136 @@
           <p id="unit4">Unit Name</p>
           <p id="unit5">Unit Name</p>
           <p id="unit6">Unit Name</p>
+=======
+    <div>
+      <navbar />
+    </div>
+   <div class="wrapper">
+     <!-- profile  -->
+        <div class="container">
+                <img id="image" src="../../assets/images/blank-profile-picture-973460_1280.png" alt="image">
+                <h1 id="header"> Student Details </h1>
+        </div>
+       <!-- Data Section  -->
+       <h3>Personal Details</h3>
+        <div class="info">
+          <table class="personal_info">
+             <tr>
+                      <th>Name:</th>
+                      <td >Jane{{name}}</td>
+                    </tr>
+        
+                    <tr>    
+                      <th>Registration No:</th>
+                      <td >Hdb212-0040/1027 {{regNo}}</td>
+                    </tr>
+        
+                    <tr>    
+                        <th>Email:</th>
+                        <td >emailaddress@gmail.com {{email}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Year of Study:</th>
+                        <td >2 {{year}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Semester:</th>
+                        <td>2{{semester}}</td>
+                      </tr>
+          </table>
+          <table class="personal_info">
+             <tr>
+                      <th>Gender:</th>
+                      <td >Gender {{Gender}}</td>
+                    </tr>
+        
+                    <tr>    
+                      <th>Telephone no:</th>
+                      <td >Telephone no {{telNo}}</td>
+                    </tr>
+        
+                    <tr>    
+                        <th>Nationality:</th>
+                        <td > Nationality {{nationality}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>ID No</th>
+                        <td >id {{ID}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Sponsor</th>
+                        <td>sponsor {{sponsor}}</td>
+                      </tr>
+          </table>
+          <!-- Personal data  -->
+            <!-- <div class="personal_info">  
+                <table>
+                    <tr>
+                      <th>Name:</th>
+                      <td >Jane{{name}}</td>
+                    </tr>
+        
+                    <tr>    
+                      <th>Registration No:</th>
+                      <td >Hdb212-0040/1027 {{regNo}}</td>
+                    </tr>
+        
+                    <tr>    
+                        <th>Email:</th>
+                        <td >emailaddress@gmail.com {{email}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Year of Study:</th>
+                        <td >2 {{year}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Semester:</th>
+                        <td>2{{semester}}</td>
+                      </tr>
+                    
+                  </table>
+                
+            </div>
+
+            <div class="personal_info">
+                <table>
+                    <tr>
+                      <th>Name:</th>
+                      <td >Jane{{name}}</td>
+                    </tr>
+        
+                    <tr>    
+                      <th>Registration No:</th>
+                      <td >Hdb212-0040/1027 {{regNo}}</td>
+                    </tr>
+        
+                    <tr>    
+                        <th>Email:</th>
+                        <td >emailaddress@gmail.com {{email}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Year of Study:</th>
+                        <td >2 {{year}}</td>
+                      </tr>
+        
+                      <tr>    
+                        <th>Semester:</th>
+                        <td>2{{semester}}</td>
+                      </tr>
+                    
+                  </table>
+                
+            
+            </div> -->
+
+>>>>>>> 44a8ea04c3324531fcf8d7cdadb057d1e3a3e254
         </div>
       </div>
     </div>
@@ -127,12 +258,22 @@ p {
 .course_info {
   flex: 1;
 }
+<<<<<<< HEAD
 .personal_info > table {
   text-align: left;
 }
 td,
 th {
   padding: 0.25rem 0.25rem 0.25rem 0;
+=======
+
+.personal_info>table{
+    text-align: left;
+
+}
+td,th{
+    padding: 0.25rem 0.25rem 1.5rem 0 ;
+>>>>>>> 44a8ea04c3324531fcf8d7cdadb057d1e3a3e254
 }
 .units {
   margin-top: 0.5rem;
