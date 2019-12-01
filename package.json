@@ -11,7 +11,6 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/apollo": "^4.0.0-rc17",
     "@nuxtjs/auth": "^4.8.4",
     "@nuxtjs/axios": "^5.3.6",
     "axios": "^0.19.0",
@@ -21,10 +20,7 @@
     "cookieparser": "^0.1.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
-    "graphql": "^14.5.8",
-    "js-cookie": "^2.2.1",
-    "nuxt": "^2.0.0",
-    "strapi-sdk-javascript": "^0.3.3"
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",

@@ -29,13 +29,17 @@ export default {
   ],
   axios: {},
   serverMiddleware: [
+    // body-parser middleware
     bodyParser.json(),
+    // session middleware
     session({
       secret: 'super-secret-key',
       resave: false,
       saveUninitialized: false,
       cookie: { maxAge: 60000 }
     }),
+    // Api middleware
+    // We add /api/login & /api/logout routes
     '~/api'
   ],
   build: {
