@@ -36,7 +36,7 @@ export default {
       saveUninitialized: false,
       cookie: { maxAge: 60000 }
     }),
-    './api'
+    '~/api'
   ],
   build: {
     extend(config, ctx) { }
