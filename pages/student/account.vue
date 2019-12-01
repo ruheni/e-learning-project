@@ -96,7 +96,13 @@ body {
   box-shadow: 0 1px 20px rgba(69, 90, 100, 0.08);
   background-color: #ffffff;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin: 30px;
+  }
 }
 .container {
   background-color: #9eb2de;
