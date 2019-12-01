@@ -17,27 +17,27 @@
                 <table>
                     <tr>
                       <th>Name:</th>
-                      <td id="name">Jane</td>
+                      <td >Jane{{name}}</td>
                     </tr>
         
                     <tr>    
                       <th>Registration No:</th>
-                      <td id= "regNo">Hdb212-0040/1027</td>
+                      <td >Hdb212-0040/1027 {{regNo}}</td>
                     </tr>
         
                     <tr>    
                         <th>Email:</th>
-                        <td id= "email">emailaddress@gmail.com</td>
+                        <td >emailaddress@gmail.com {{email}}</td>
                       </tr>
         
                       <tr>    
                         <th>Year of Study:</th>
-                        <td id= "year">2</td>
+                        <td >2 {{year}}</td>
                       </tr>
         
                       <tr>    
                         <th>Semester:</th>
-                        <td id= "semester">2</td>
+                        <td>2{{semester}}</td>
                       </tr>
                     
                   </table>
