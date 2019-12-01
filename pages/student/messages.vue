@@ -12,6 +12,7 @@
 import navbar from '../../components/navbar.vue'
 export default {
   components: { navbar },
+  middleware: 'auth',
   data() {
     return {}
   }

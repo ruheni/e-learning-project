@@ -1,8 +1,8 @@
 <template>
   <div class="page">
-    <div>
+
       <navbar />
-    </div>
+   
     <div>
       <h1>Coursework materials</h1>
     </div>
@@ -12,6 +12,7 @@
 import navbar from '../../components/navbar.vue'
 export default {
   components: { navbar },
+  middleware: 'auth',
   data() {
     return {
       units: [

@@ -33,8 +33,8 @@ h6 {
   font-weight: 700;
   color: #333;
 }
-.page {
+/* .page {
   display: grid;
   grid-template-columns: 1fr 5fr;
-}
+} */
 </style>

@@ -1,12 +1,10 @@
-<template>
-  <div class="container"></div>
-</template>
+<template></template>
 
 <script>
 export default {
-  components: {}
+  data() {
+    return {}
+  },
+  computed: {}
 }
 </script>
-
-<style>
-</style>
