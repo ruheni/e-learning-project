@@ -1,8 +1,6 @@
 export default function ({ store, redirect }) {
-    if (!store.state.authUser) {
-        error({
-            message: 'You are not connected',
-            statusCode: 403
-        })
+    // If the user is not authenticated
+    if (!store.state.auth) {
+        return redirect('/login')
     }
 }

@@ -1,37 +1,28 @@
-import axios from 'axios'
+const cookieparser = process.server ? require('cookieparser') : undefined
 
-export const state = () => ({
-    authUser: null
-})
-
-export const mutations = {
-    SET_USER(state, user) {
-        state.authUser = user
+export const state = () => {
+    return {
+        auth: null
     }
 }
 
+export const mutations = {
+    setAuth(state, auth) {
+        state.auth = auth
+    }
+}
 
 export const actions = {
-    // nuxtServerInit is called before server-rendering every page
     nuxtServerInit({ commit }, { req }) {
-        if (req.session && req.session.authUser) {
-            commit('SET_USER', req.session.authUser)
-        }
-    },
-    async login({ commit }, { username, password }) {
-        try {
-            const { data } = await axios.post('/api/login', { username, password })
-            this.$router.replace('/student')
-            commit('SET_USER', data)
-        } catch (error) {
-            if (error.response && error.response.status === 401) {
-                throw new Error('Invalid credentials')
+        let auth = null
+        if (req.headers.cookie) {
+            const parsed = cookieparser.parse(req.headers.cookie)
+            try {
+                auth = JSON.parse(parsed.auth)
+            } catch (error) {
+                // No valid cookie found
             }
-            throw error
         }
-    },
-    async logout({ commit }) {
-        await axios.post('/api/logout')
-        commit('SET_USER', null)
+        commit('setAuth', auth)
     }
 }

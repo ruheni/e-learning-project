@@ -12,30 +12,28 @@
         </b-nav-item-dropdown>
 
         <!--  -->
-        <b-nav-item v-if="username">
+        <b-nav-item v-if="$store.auth">
           Hello
-          <em>{{ username }}</em>
+          <em>{{ $auth.user }}</em>
         </b-nav-item>
-        <b-nav-item v-if="$store.state.authUser" @click="logout">Logout</b-nav-item>
+        <b-nav-item v-if="$store.auth" @click="logout">Logout</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
   </div>
 </template>
 <script>
+const Cookie = process.client ? require('js-cookie') : undefined
+
 export default {
   name: 'Navbar',
   data() {
     return {
-      username: this.$store.state.authUser.username
     }
   },
   methods: {
     async logout() {
-      try {
-        await this.$store.dispatch('logout')
-      } catch (error) {
-        this.formError = error.message
-      }
+      Cookie.remove('auth')
+      this.$store.commit('setAuth', null)
     }
   }
 }

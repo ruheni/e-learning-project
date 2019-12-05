@@ -1,6 +1,3 @@
-import bodyParser from 'body-parser'
-import session from 'express-session'
-
 export default {
   mode: 'universal',
   head: {
@@ -19,29 +16,15 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  loading: { color: '#fff' },
+  loading: false,
   css: [],
   plugins: [],
   buildModules: [],
   modules: [
     'bootstrap-vue/nuxt',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
   ],
   axios: {},
-  serverMiddleware: [
-    // body-parser middleware
-    bodyParser.json(),
-    // session middleware
-    session({
-      secret: 'super-secret-key',
-      resave: false,
-      saveUninitialized: false,
-      cookie: { maxAge: 60000 }
-    }),
-    // Api middleware
-    // We add /api/login & /api/logout routes
-    '~/api'
-  ],
   build: {
     extend(config, ctx) { }
   }
